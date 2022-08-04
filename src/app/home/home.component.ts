@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   public name: string = 'VAnh';
   public age: number = 18;
+  public fruits = [
+    { name: 'Apple', price: 10 },
+    { name: 'Orange', price: 20 },
+  ];
 
   constructor() {}
 
