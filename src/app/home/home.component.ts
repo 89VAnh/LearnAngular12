@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   public fruits = [
     { name: 'Apple', price: 10 },
     { name: 'Orange', price: 20 },
+    { name: 'Banana', price: 30 },
+    { name: 'Pear', price: 40 },
   ];
 
   constructor() {}
