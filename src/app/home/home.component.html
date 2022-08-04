@@ -1,21 +1,16 @@
 <div class="test">
   Home page !
-
-  <h2>Trai cay</h2>
-  <table class="table">
-    <tr>
-      <th></th>
-      <th>Name</th>
-      <th>Price</th>
-    </tr>
-    <tr *ngFor="let fruit of fruits; let i = index">
-      <td>{{ i + 1 }}</td>
-      <td>{{ fruit.name | uppercase }}</td>
-      <td>
-        <span [ngClass]="{ red: fruit.price > 10 }">{{
-          fruit.price | currency: "VND"
-        }}</span>
-      </td>
-    </tr>
-  </table>
+  <h3>Tỉnh / Thành Phố</h3>
+  <select id="city" (change)="changeCity($event)">
+    <option *ngFor="let city of cities" value="{{ city.name }}">
+      {{ city.name }}
+    </option>
+  </select>
+  <br />
+  <h3>Quận / Huyện</h3>
+  <select id="distincts">
+    <option *ngFor="let distinct of distincts" value="{{ distinct }}">
+      {{ distinct }}
+    </option>
+  </select>
 </div>

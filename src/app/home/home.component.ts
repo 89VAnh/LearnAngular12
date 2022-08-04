@@ -6,20 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  public name: string = 'VAnh';
-  public age: number = 18;
-  public fruits = [
-    { name: 'Apple', price: 10 },
-    { name: 'Orange', price: 20 },
-    { name: 'Banana', price: 30 },
-    { name: 'Pear', price: 40 },
+  cities = [
+    { name: 'Chon thanh pho', distincts: [] },
+    { name: 'Hung Yen', distincts: ['Yen My', 'Lieu Xa'] },
+    { name: 'Hanoi', distincts: ['Hanoi', 'Ha Noi', 'Cau Giay'] },
+    { name: 'Da Nang', distincts: ['Da Nang', 'Dai Nang'] },
   ];
+  distincts: any[] = [];
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  public resetName(): void {
-    this.name = '';
+  changeCity(e: any) {
+    const city = e.target.value;
+    this.distincts =
+      this.cities.find(({ name }) => name === city)?.distincts || [];
   }
 }
