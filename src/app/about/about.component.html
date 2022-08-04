@@ -1,1 +1,6 @@
 <p>about works!</p>
+<div [ngSwitch]="loginName">
+  <div *ngSwitchCase="'user'">User id logged in ...</div>
+  <div *ngSwitchCase="'admin'">Admin id logged in ...</div>
+  <div *ngSwitchDefault>please choose loggin name</div>
+</div>
