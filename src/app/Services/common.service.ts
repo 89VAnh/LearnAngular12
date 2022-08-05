@@ -14,4 +14,8 @@ export class CommonService {
     }
     return n * this.Factorial(n - 1);
   }
+
+  submitData(data: any): void {
+    console.log('sever ->', data);
+  }
 }
