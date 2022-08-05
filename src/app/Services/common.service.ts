@@ -16,6 +16,6 @@ export class CommonService {
   }
 
   submitData(data: any): void {
-    console.log('sever ->', data);
+    console.log(data, '-> server');
   }
 }

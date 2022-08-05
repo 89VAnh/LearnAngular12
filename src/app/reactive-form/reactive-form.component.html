@@ -1,0 +1,26 @@
+<p>reactive-form works!</p>
+<form [formGroup]="formData" (ngSubmit)="onSubmit()">
+  <label for="name">
+    Name :
+    <input type="text" formControlName="name" />
+    <div
+      *ngIf="!formData.controls['name'].valid"
+      style="color: red; font-size: 12px"
+    >
+      Name is required
+    </div>
+  </label>
+  <br />
+  <label for="age">
+    Age :
+    <input type="number" formControlName="age" />
+    <div
+      *ngIf="!formData.controls['age'].valid"
+      style="color: red; font-size: 12px"
+    >
+      Age is required
+    </div>
+  </label>
+  <br />
+  <input type="submit" value="submit" [disabled]="!formData.valid" />
+</form>
