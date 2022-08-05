@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
+import { PostDataComponent } from './post-data/post-data.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'template', component: TemplateDrivenFormComponent },
   { path: 'reactiveForm', component: ReactiveFormComponent },
   { path: 'getData', component: GetDataComponent },
+  { path: 'postData', component: PostDataComponent },
 
   { path: '**', component: PageNotFoundComponent },
   // Wildcard route for a 404 page

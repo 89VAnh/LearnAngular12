@@ -16,6 +16,29 @@
       "id": 2,
       "body": "some comment",
       "postId": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "body": "some comment",
+      "postId": 1,
+      "id": 4
+    },
+    {
+      "body": "some comment",
+      "postId": 1,
+      "id": 5
+    },
+    {
+      "body": "some comment",
+      "postId": 1,
+      "id": 6
+    },
+    {
+      "body": "some comment",
+      "postId": 1,
+      "id": 7
     }
   ],
   "profile": {

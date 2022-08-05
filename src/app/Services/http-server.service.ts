@@ -20,6 +20,18 @@ export class HttpServerService {
     const url = `${this.REST_API_SERVER}/comments`;
     return this.httpClient.get<any>(url, this.httpOptions);
   }
+  postComment(payload: any): Observable<any> {
+    const url = `${this.REST_API_SERVER}/comments`;
+    return this.httpClient.post<any>(url, payload, this.httpOptions);
+  }
+  deleteComment(id: number): Observable<any> {
+    const url = `${this.REST_API_SERVER}/comments/${id}`;
+    return this.httpClient.delete<any>(url, this.httpOptions);
+  }
+  updateComment(payload: any): Observable<any> {
+    const url = `${this.REST_API_SERVER}/comments/${payload.id}`;
+    return this.httpClient.put<any>(url, payload, this.httpOptions);
+  }
 
   getRandomUser(users: number = 1): Observable<any> {
     const url = `${this.REST_RANDOM_API_SERVER}/?results=${users}`;
