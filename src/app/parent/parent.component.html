@@ -1,0 +1,4 @@
+<p>parent works!</p>
+<button (click)="sendMoney()">Send money</button>
+<app-child #child1 name="1" (callParent)="calledParent($event)"></app-child>
+<app-child #child2 name="2" (callParent)="calledParent($event)"></app-child>
